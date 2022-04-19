@@ -1,6 +1,7 @@
 package com.example.team_a.ui.login
 
 import android.app.Activity
+import android.content.Intent
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -16,6 +17,7 @@ import android.widget.ProgressBar
 import android.widget.Toast
 
 import com.example.team_a.R
+import com.example.team_a.data.CreateUserActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -30,6 +32,9 @@ class LoginActivity : AppCompatActivity() {
         val password = findViewById<EditText>(R.id.password)
         val login = findViewById<Button>(R.id.login)
         val loading = findViewById<ProgressBar>(R.id.loading)
+        //1.画面遷移用ボタンの取得。
+        val btnIntent = findViewById<Button>(R.id.newbt)
+        val intent = Intent(this, CreateUserActivity::class.java)
 
         loginViewModel = ViewModelProvider(this, LoginViewModelFactory())
                 .get(LoginViewModel::class.java)
@@ -94,6 +99,14 @@ class LoginActivity : AppCompatActivity() {
                 loading.visibility = View.VISIBLE
                 loginViewModel.login(username.text.toString(), password.text.toString())
             }
+
+            //2.画面遷移用ボタンにリスナを登録。
+            btnIntent.setOnClickListener {
+                Toast.makeText(applicationContext, "おされました", Toast.LENGTH_SHORT).show();
+                startActivity(intent)
+            }
+
+
         }
     }
 
