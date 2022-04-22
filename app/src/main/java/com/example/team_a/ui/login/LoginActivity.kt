@@ -32,6 +32,7 @@ class LoginActivity : AppCompatActivity() {
         val password = findViewById<EditText>(R.id.password)
         val login = findViewById<Button>(R.id.login)
         val loading = findViewById<ProgressBar>(R.id.loading)
+
         //1.画面遷移用ボタンの取得。
         val btnIntent = findViewById<Button>(R.id.newbt)
         val intent = Intent(this, CreateUserActivity::class.java)
@@ -102,7 +103,6 @@ class LoginActivity : AppCompatActivity() {
 
             //2.画面遷移用ボタンにリスナを登録。
             btnIntent.setOnClickListener {
-                Toast.makeText(applicationContext, "おされました", Toast.LENGTH_SHORT).show();
                 startActivity(intent)
             }
 

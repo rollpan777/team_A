@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.core.content.res.TypedArrayUtils.getText
 import com.example.team_a.R
 import com.example.team_a.ui.login.LoginActivity
 
@@ -23,12 +24,16 @@ class CreateUserActivity : AppCompatActivity() {
         val fistpass = findViewById<EditText>(R.id.editPass)
         val Repass = findViewById<EditText>(R.id.editPassword)
 
+
         //クリエイトボタンが押されたときの処理
         button.setOnClickListener({
-            if(editText != null){
-
+            //UserNameが空白の時エラー出す
+            if(editText.getText().toString().equals("") != false){
+                Toast.makeText(applicationContext, "UserNameが空白", Toast.LENGTH_SHORT).show();
             }
-
+            if(fistpass != Repass){
+                Toast.makeText(applicationContext, "パスワードが違います", Toast.LENGTH_SHORT).show();
+            }
         })
 
         //2.画面遷移用ボタンにリスナを登録。
