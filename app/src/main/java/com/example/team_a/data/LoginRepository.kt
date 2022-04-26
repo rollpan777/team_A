@@ -1,12 +1,19 @@
 package com.example.team_a.data
 
+import android.content.Intent
+import android.os.Bundle
+import android.view.AbsSavedState
+import android.view.View
+import android.widget.Button
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.example.team_a.R
 import com.example.team_a.data.model.LoggedInUser
 
 /**
  * Class that requests authentication and user information from the remote data source and
  * maintains an in-memory cache of login status and user credentials information.
  */
-
 class LoginRepository(val dataSource: LoginDataSource) {
 
     // in-memory cache of the loggedInUser object
@@ -43,4 +50,10 @@ class LoginRepository(val dataSource: LoginDataSource) {
         // If user credentials will be cached in local storage, it is recommended it be encrypted
         // @see https://developer.android.com/training/articles/keystore
     }
+
+
 }
+
+
+
+
