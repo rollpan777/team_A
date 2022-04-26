@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/timeline"
+        app:showAsAction="never"
+        android:title="TimeLine"/>
+
+    <item
+        app:showAsAction="never"
+        android:title="Search"/>
+
+    <item
+        app:showAsAction="never"
+        android:title="Whisper"/>
+
+    <item
+        app:showAsAction="never"
+        android:title="Profile"/>
+
+    <item
+        app:showAsAction="never"
+        android:title="UserEdit"/>
+
+    <item
+        app:showAsAction="never"
+        android:title="Logout"/>
+
+</menu>
