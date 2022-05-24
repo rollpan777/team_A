@@ -6,8 +6,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.core.content.res.TypedArrayUtils.getText
 import com.example.team_a.R
+import com.example.team_a.TimelineActivity
 import com.example.team_a.ui.login.LoginActivity
 
 class CreateUserActivity : AppCompatActivity() {
@@ -20,14 +20,14 @@ class CreateUserActivity : AppCompatActivity() {
         //1.画面遷移用ボタンの取得。
         val btnIntent = findViewById<Button>(R.id.nobt)
 
-        val editText = findViewById<EditText>(R.id.editName)
+        val editText = findViewById<EditText>(R.id.userNameEdit)
         val editEmail = findViewById<EditText>(R.id.editEmail)
         val fistpass = findViewById<EditText>(R.id.editPassword)
         val Repass = findViewById<EditText>(R.id.editPass)
 
 
         //クリエイトボタンが押されたときの処理
-        button.setOnClickListener({
+        button.setOnClickListener{
             //UserNameが空白の時エラー出す
             if(editText.getText().toString().equals("") != false){
                 Toast.makeText(applicationContext, "UserNameが空白", Toast.LENGTH_SHORT).show();
@@ -50,11 +50,11 @@ class CreateUserActivity : AppCompatActivity() {
             }
             else{
                 //phpのほうができていないため、usernameとpassを入力したら路銀画面に飛ぶようにした　4/22
-                val intent = Intent(this, LoginActivity::class.java)
+                val intent = Intent(this, TimelineActivity::class.java)
                 startActivity(intent)
             }
 
-        })
+        }
 
         //2.画面遷移用ボタンにリスナを登録。
         btnIntent.setOnClickListener {

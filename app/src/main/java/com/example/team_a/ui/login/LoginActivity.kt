@@ -28,13 +28,13 @@ class LoginActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_login)
 
-        val username = findViewById<EditText>(R.id.username)
-        val password = findViewById<EditText>(R.id.password)
-        val login = findViewById<Button>(R.id.login)
+        val username = findViewById<EditText>(R.id.userIdEdit)
+        val password = findViewById<EditText>(R.id.passwordEdit)
+        val login = findViewById<Button>(R.id.loginButton)
         val loading = findViewById<ProgressBar>(R.id.loading)
 
         //1.画面遷移用ボタンの取得。
-        val btnIntent = findViewById<Button>(R.id.newbt)
+        val btnIntent = findViewById<Button>(R.id.createButton)
         val intent = Intent(this, CreateUserActivity::class.java)
 
         loginViewModel = ViewModelProvider(this, LoginViewModelFactory())
