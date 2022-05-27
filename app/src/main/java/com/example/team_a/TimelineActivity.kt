@@ -15,7 +15,7 @@ class TimelineActivity : AppCompatActivity() {
         val timelineRecycle = findViewById<RecyclerView>(R.id.timelineRecycle)
 
         val timelineList = mutableListOf<WhisperRowData>()
-        for (i in 1..5) {
+        for (i in 1..10) {
             timelineList.add(WhisperRowData("名前", "テキスト"))
         }
 

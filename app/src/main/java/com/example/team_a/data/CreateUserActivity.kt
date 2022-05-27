@@ -58,7 +58,7 @@ class CreateUserActivity : AppCompatActivity() {
 
         //2.画面遷移用ボタンにリスナを登録。
         btnIntent.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
+            val intent = Intent(this, TimelineActivity::class.java)
             Toast.makeText(applicationContext, "キャンセルします", Toast.LENGTH_SHORT).show();
             startActivity(intent)
         }

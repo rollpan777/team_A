@@ -8,22 +8,27 @@
         android:title="TimeLine"/>
 
     <item
+        android:id="@+id/search"
         app:showAsAction="never"
         android:title="Search"/>
 
     <item
+        android:id="@+id/whisper"
         app:showAsAction="never"
         android:title="Whisper"/>
 
     <item
+        android:id="@+id/myprofile"
         app:showAsAction="never"
         android:title="Profile"/>
 
     <item
+        android:id="@+id/profileedit"
         app:showAsAction="never"
         android:title="UserEdit"/>
 
     <item
+        android:id="@+id/logout"
         app:showAsAction="never"
         android:title="Logout"/>
 
