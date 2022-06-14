@@ -1,4 +1,4 @@
-package com.example.team_a
+package com.example.team_a.ui.login
 
 data class WhisperRowData(
         val userNameText: String,

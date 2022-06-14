@@ -1,13 +1,5 @@
 package com.example.team_a.data
 
-import android.content.Intent
-import android.os.Bundle
-import android.view.AbsSavedState
-import android.view.View
-import android.widget.Button
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
-import com.example.team_a.R
 import com.example.team_a.data.model.LoggedInUser
 
 /**
@@ -34,9 +26,9 @@ class LoginRepository(val dataSource: LoginDataSource) {
         dataSource.logout()
     }
 
-    fun login(username: String, password: String): Result<LoggedInUser> {
+    fun login(): Result<LoggedInUser> {
         // handle login
-        val result = dataSource.login(username, password)
+        val result = dataSource.login()
 
         if (result is Result.Success) {
             setLoggedInUser(result.data)

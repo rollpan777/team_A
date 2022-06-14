@@ -1,4 +1,4 @@
-package com.example.team_a
+package com.example.team_a.ui.login
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.team_a.R
 
 class WhisperAdapter(private val dataSet: MutableList<WhisperRowData>) : RecyclerView.Adapter<WhisperAdapter.ViewHolder>() {
 
@@ -23,13 +24,13 @@ class WhisperAdapter(private val dataSet: MutableList<WhisperRowData>) : Recycle
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WhisperAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.recycle_row, parent, false)
 
         return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: WhisperAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         /*
         holder.userNameText.text = dataSet[position].userNameText.toString()
 
